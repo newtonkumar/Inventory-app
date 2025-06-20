@@ -62,8 +62,6 @@ export default function Index({ roles }: IndexProps) {
     const [selectedCategory, setSelectedCategory] = useState<any>(null);
     const { permissions } = usePage().props;
 
-    console.log(permissions);
-
     const { data, setData, errors, processing, reset, post } = useForm<{
         label: string;
         description: string;

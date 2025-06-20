@@ -9,19 +9,9 @@ const breadcrumbs: BreadcrumbItem[] = [
     },
 ];
 
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { Input } from '@/components/ui/input';
-import { ArrowRight, BarChart3, ChevronDown, DollarSign, IndianRupeeIcon, MoreHorizontal, Package2, Search, Users } from 'lucide-react';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { ArrowRight, BarChart3, IndianRupeeIcon, Package2, Users } from 'lucide-react';
 
 // Dummy data
 const analyticsData = {

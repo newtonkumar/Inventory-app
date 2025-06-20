@@ -79,12 +79,16 @@ export default function Index({ permissions }: IndexProps) {
                 preserveScroll: true,
                 onSuccess: (response: { props: FlashProps }) => {
                     const successMessage = response.props.flash?.success;
-                    successMessage && toast.success(successMessage);
+                    if (successMessage) {
+                        toast.success(successMessage);
+                    }
                     closeModal();
                 },
                 onError: (error: Record<string, string>) => {
                     const errorMessage = error?.message;
-                    errorMessage && toast.error(errorMessage);
+                    if (errorMessage) {
+                        toast.error(errorMessage);
+                    }
                     closeModal();
                 },
             });
@@ -103,24 +107,32 @@ export default function Index({ permissions }: IndexProps) {
                 forceFormData: true,
                 onSuccess: (response: { props: FlashProps }) => {
                     const successMessage = response.props.flash?.success;
-                    successMessage && toast.success(successMessage);
+                    if (successMessage) {
+                        toast.success(successMessage);
+                    }
                     closeModal();
                 },
                 onError: (error: Record<string, string>) => {
                     const errorMessage = error?.message;
-                    errorMessage && toast.error(errorMessage);
+                    if (errorMessage) {
+                        toast.error(errorMessage);
+                    }
                 },
             });
         } else {
             post(route('permissions.store'), {
                 onSuccess: (response: { props: FlashProps }) => {
                     const successMessage = response.props.flash?.success;
-                    successMessage && toast.success(successMessage);
+                    if (successMessage) {
+                        toast.success(successMessage);
+                    }
                     closeModal();
                 },
                 onError: (error: Record<string, string>) => {
                     const errorMessage = error?.message;
-                    errorMessage && toast.error(errorMessage);
+                    if (errorMessage) {
+                        toast.error(errorMessage);
+                    }
                 },
             });
         }

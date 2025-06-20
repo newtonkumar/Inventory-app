@@ -118,7 +118,7 @@ export const CustomModalForm = ({
                 </DialogHeader>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="grid gap-6">
+                    <div className="max-h-[65vh] overflow-y-auto pr-2 grid gap-6">
                         {fields.map((field) => {
                             const isHiddenPassword = field.type === 'password' && mode !== 'create';
                             if (isHiddenPassword) return null;
